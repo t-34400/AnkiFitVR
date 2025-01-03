@@ -12,8 +12,6 @@ namespace AnkiConnectClient
         public void ShowAnswer(Action<string[]> onSuccess) => AnkiConnectClientWrapper.ShowAnswer(this, onSuccess);
         public void AnswerCard(int ease, Action<string[]> onSuccess) => AnkiConnectClientWrapper.AnswerCard(this, ease, onSuccess);
 
-        [ContextMenu("Open Deck Review")]
-        public void OpenDeckReview() => OpenDeckReview("00:English::01:Personal English", (result) => { });
         [ContextMenu("Show Answer")]
         public void ShowAnswer() => ShowAnswer((result) => { });
         [ContextMenu("Answer Card: Again")]
