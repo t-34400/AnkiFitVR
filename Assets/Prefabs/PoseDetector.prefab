@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5361988863523913871}
+  - component: {fileID: 3613476386330105975}
+  - component: {fileID: 8289861901436764600}
   - component: {fileID: 8282904794779743633}
   - component: {fileID: 4014191524405796461}
   m_Layer: 0
@@ -33,6 +35,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3613476386330105975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175412021002742112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de5613aa5f224248b2cef5814c0a1e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _poseA: {fileID: 11400000, guid: a9335c10bfae74e409e43e7516f0e794, type: 2}
+  _poseB: {fileID: 0}
+  _source: 0
+--- !u!114 &8289861901436764600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175412021002742112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ff0dbc3add03444934d0bd81a06242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pose: {fileID: 3613476386330105975}
+  _referenceJoint: 1
+  _referenceOffset:
+    position: {x: 0, y: 0.923987, z: 0}
+    rotation: {x: 0.49999997, y: -0.49999997, z: -0.49999997, w: 0.49999997}
 --- !u!114 &8282904794779743633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,19 +80,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _poseA: {fileID: 11400000, guid: a9335c10bfae74e409e43e7516f0e794, type: 2}
-  _poseB: {fileID: 0}
+  _poseB: {fileID: 8289861901436764600}
   _configs:
-  - Joint: 11
-    MaxDelta: 30
+  - Joint: 5
+    MaxDelta: 50
     Width: 4
-  - Joint: 16
-    MaxDelta: 30
+  - Joint: 4
+    MaxDelta: 50
     Width: 4
   - Joint: 10
     MaxDelta: 30
     Width: 4
-  - Joint: 15
+  - Joint: 11
     MaxDelta: 30
+    Width: 4
+  - Joint: 15
+    MaxDelta: 45
+    Width: 4
+  - Joint: 16
+    MaxDelta: 45
     Width: 4
   _minTimeInState: 0.5
 --- !u!114 &4014191524405796461
